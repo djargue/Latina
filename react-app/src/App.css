@@ -8,8 +8,8 @@
 /* Ajustes para pantallas más pequeñas */
 @media (max-width: 600px) {
   .logo {
-    height: 20vw; 
-    padding: 1em; 
+    height: 15vw; 
+    padding: 0.7em; 
   }
 }
 
@@ -17,15 +17,15 @@
 @media (min-width: 601px) and (max-width: 1024px) {
   .logo {
     height: 15vw; 
-    padding: 1.2em; 
+    padding: 1.0em; 
   }
 }
 
 /* Ajustes para pantallas grandes */
 @media (min-width: 1025px) {
   .logo {
-    height: 12vw; 
-    padding: 1.5em; 
+    height: 15vw; 
+    padding: 1.2em; 
   }
 }
 
@@ -33,6 +33,7 @@
 .logo {
   will-change: filter;
   transition: filter 300ms;
+  fill: black;
 }
 
 p {
@@ -43,4 +44,8 @@ p {
 .colorVerde{
   background: #92d50b;
   fill: black;
+}
+
+.colorGrisOscuro{
+  color: #4d4d4f;
 }
