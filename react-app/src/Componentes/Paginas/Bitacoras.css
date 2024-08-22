@@ -1,0 +1,114 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+  }
+  
+  .logo {
+    width: 150px;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .menu a:hover {
+    background-color: #ddd;
+  }
+  
+  .active {
+    color: #8c2641; /* Rojo oscuro */
+    background-color: #e0e0e0; /* Un gris más claro */
+  }
+  
+  .perfil-container {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #8c2641;
+  }
+  
+  .bitacoras-container {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .bitacoras-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .bitacoras-menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .bitacoras-menu select,
+  .bitacoras-menu button,
+  .bitacoras-menu input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .bitacoras-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  .bitacoras-table th,
+  .bitacoras-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .bitacoras-table th {
+    background-color: #92d50b;
+    color: white;
+  }
+  
+  .bitacoras-table tr:hover {
+    background-color: #f4f4f4;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #92d50b;
+    padding: 10px;
+    color: #4d4d4f;
+    font-size: 18px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  

@@ -1,17 +1,14 @@
-import { useState } from "react";
-
 import "./App.css";
-
-import LoginForm from "./Componentes/Login/LoginForm";
+//import Principal from "./Componentes/Paginas/Principal";
+//import LoginForm from "./Componentes/Paginas/LoginForm";
+//import Bitacoras from "./Componentes/Paginas/Bitacoras";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <div>
-        <LoginForm />
+        <Bitacoras />
       </div>
     </>
   );

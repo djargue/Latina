@@ -1,10 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
 
 function Login() {
   const [usuario, setUsuario] = useState("");
   const [contrasena, setContrasena] = useState("");
   const [error, setError] = useState(null);
+  const [ip, setIp] = useState("");
+  const navigate = useNavigate(); // Hook para navegación
+
+  // Obtener la IP de la red
+  useEffect(() => {
+    const fetchIp = async () => {
+      try {
+        const response = await fetch("https://api.ipify.org?format=json");
+        const data = await response.json();
+        setIp(data.ip);
+      } catch (error) {
+        console.error("Error fetching IP:", error);
+      }
+    };
+    fetchIp();
+  }, []);
 
   const handleLogin = async (event) => {
     event.preventDefault();
@@ -12,10 +29,9 @@ function Login() {
     const loginData = {
       correo: usuario,
       contrasena: contrasena,
+      ip: ip,
     };
 
-    //
-    // corregir el api//
     try {
       const response = await fetch("https://tudominio.com/api/login", {
         method: "POST",
@@ -31,11 +47,12 @@ function Login() {
 
       const data = await response.json();
 
-      // Aquí guardarías el token en el local storage o en el estado global (ej. Redux)
+      // Token y código de usuario en localStorage o sessionStorage
       localStorage.setItem("token", data.token);
+      localStorage.setItem("codigoUsuario", data.codigoUsuario);
 
-      // Redirige al usuario a otra página después de un login exitoso
-      window.location.href = "/dashboard";
+      // Navegar a la página principal y pasar la información del usuario y la IP
+      navigate("/principal", { state: { usuario, ip } });
     } catch (error) {
       setError("Usuario o contraseña incorrectos");
       console.error("Error during login:", error);

@@ -1,7 +1,7 @@
 .login-container {
     width: 500px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     background-color: #f4f4f4;
     border-radius: 10px;
@@ -37,44 +37,28 @@
     font-size: 1rem;
   }
   
-  .password-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .toggle-password {
-    position: absolute;
-    right: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-  }
-  
   button {
     width: 100%;
     padding: 10px;
-    background-color: #92d50b;
+    background-color: #92d50b !important;
     border: none;
     border-radius: 5px;
-    color: white; 
+    color: #4d4d4f !important;
     font-size: 1rem;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #639107;
-    color: white; 
+    background-color: #639107 !important;
+    color: white !important;
   }
+  
   
   .error {
     color: red;
     margin-bottom: 10px;
   }
   
-
-
 
   /* Media Queries */
   @media (max-width: 768px) {
